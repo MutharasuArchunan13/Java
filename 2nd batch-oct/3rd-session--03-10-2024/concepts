@@ -1,0 +1,13 @@
+1) class and object
+2) methods and method overloading
+3)Array and jagged Array
+
+questions:
+
+a) Create a "Book" class with title and author attributes, and a method to display book info.
+b) Design a "BankAccount" class with methods for deposit, withdrawal, and checking balance.
+c) Implement a "Shape" hierarchy with subclasses for different shapes, each with a method to calculate area.
+d) Create a "MathOperations" class with overloaded methods for addition, handling different numbers and types of parameters.
+
+1 session 1hr -> morning
+2 session 1hr -> evening
