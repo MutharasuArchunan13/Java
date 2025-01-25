@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -37,16 +39,37 @@ public class FileHandling {
         //         System.out.println(name);
         // }
          
-        // FileWriter writer = new FileWriter(file, true);
-        // writer.write(68);
+        FileWriter writer = new FileWriter(file);
+        // writer.write("Hello World");
         // writer.flush();
         // writer.close();
         
-        FileReader reader = new FileReader(file);
-        int output = reader.read();
-        while(output != -1){
-            System.out.println((char)output);
-            output = reader.read();
+        // FileReader reader = new FileReader(file);
+        // int output = reader.read();
+        // while(output != -1){
+        //     System.out.println((char)output);
+        //     output = reader.read();
+        // }
+
+        // BufferedWriter and BufferReader
+
+        BufferedWriter bWriter = new BufferedWriter(writer);
+        bWriter.write("Hello World");
+        bWriter.newLine();
+        bWriter.write("Happy life");
+        bWriter.flush();
+        bWriter.close();
+
+
+        BufferedReader bReader = new BufferedReader(new FileReader(file));
+        String line = bReader.readLine();
+        int counter=0;
+        while(line != null){
+            counter++;
+            System.out.println(line);
+            line = bReader.readLine();
         }
+        bReader.close();
+        System.out.println("Number of lines in the file: "+counter);
     }
 }
